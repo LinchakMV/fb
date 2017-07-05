@@ -57,9 +57,9 @@ var tarHeight=tarobj.offsetHeight;
 var tarX=tarobj.offsetLeft;
 var tarY=tarobj.offsetTop;
 if(
-(event.changedTouches[0].pageX > tarX) &&
-(event.changedTouches[0].pageX < (tarX + tarWidth)) &&
-(event.changedTouches[0].pageY > tarY) &&
-(event.changedTouches[0].pageY < (tarY + tarHeight))){
+(event.changedTouches[0].clientX > tarX) &&
+(event.changedTouches[0].clientX < (tarX + tarWidth)) &&
+(event.changedTouches[0].clientY > tarY) &&
+(event.changedTouches[0].clientY < (tarY + tarHeight))){
 }
 }, false);
