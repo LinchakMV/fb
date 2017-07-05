@@ -34,32 +34,33 @@ $(document).ready(function(){
 
 var obj = document.getElementById('arrow');
 obj.addEventListener('touchstart', function(event) {
-if (event.targetTouches.length == 1) {
-var touch=event.targetTouches[0];
-touchOffsetX = touch.clientX - touch.target.offsetLeft;
-touchOffsetY = touch.clientY - touch.target.offsetTop;
-}
+  if (event.targetTouches.length == 1) {
+    var touch=event.targetTouches[0];
+    touchOffsetX = touch.clientX - touch.target.offsetLeft;
+    touchOffsetY = touch.clientY - touch.target.offsetTop;
+ }
 }, false);
 obj.addEventListener('touchmove', function(event) {
-if (event.targetTouches.length == 1) {
-var touch = event.targetTouches[0];
-obj.style.left = touch.clientX-touchOffsetX + 'px';
-obj.style.top = touch.clientY-touchOffsetY + 'px';
-}
+  if (event.targetTouches.length == 1) {
+    var touch = event.targetTouches[0];
+    obj.style.left = touch.clientX-touchOffsetX + 'px';
+    obj.style.top = touch.clientY-touchOffsetY + 'px';
+  }
 }, false);
 
 
 var tarobj=document.getElementById('arrow');
 obj.addEventListener('touchend', function(event) {
-if (event.changedTouches.length == 1) {
-var tarWidth=tarobj.offsetWidth;
-var tarHeight=tarobj.offsetHeight;
-var tarX=tarobj.offsetLeft;
-var tarY=tarobj.offsetTop;
-if(
-(event.changedTouches[0].clientX > tarX) &&
-(event.changedTouches[0].clientX < (tarX + tarWidth)) &&
-(event.changedTouches[0].clientY > tarY) &&
-(event.changedTouches[0].clientY < (tarY + tarHeight))){
-}
+  if (event.changedTouches.length == 1) {
+    var tarWidth=tarobj.offsetWidth;
+    var tarHeight=tarobj.offsetHeight;
+    var tarX=tarobj.offsetLeft;
+    var tarY=tarobj.offsetTop;
+    if(
+      (event.changedTouches[0].clientX > tarX) &&
+      (event.changedTouches[0].clientX < (tarX + tarWidth)) &&
+      (event.changedTouches[0].clientY > tarY) &&
+      (event.changedTouches[0].clientY < (tarY + tarHeight))){
+    }
+  }
 }, false);
