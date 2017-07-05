@@ -616,7 +616,6 @@ li.settings {
   float: left;
   width: 100%;
   position: relative;
-  z-index: 9;
   margin-bottom: 30px; }
   .people-status-div .li-status {
     float: left;
@@ -779,4 +778,5 @@ li.settings {
 
 #arrow {
   position: relative;
-  top: 30px; }
+  top: 30px;
+  z-index: 10; }
