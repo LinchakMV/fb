@@ -12,7 +12,7 @@ $(document).ready(function(){
  	
  	// Fixed left-right column
  	$(".col-md-4").stick_in_parent();
-	$(".col-md-2").stick_in_parent({recalc_every: 10});
+	$(".col-md-2").stick_in_parent({recalc_every: 10, offset_top: 40});
     
     // arrow
     $sticky = $(".col-md-2");
